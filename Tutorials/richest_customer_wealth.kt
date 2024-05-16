@@ -39,6 +39,8 @@ n == accounts[i].length
 // Solution
 class Solution {
     fun maximumWealth(accounts: Array<IntArray>): Int {
-        return accounts.map { it.sum() }.maxOf { it }
+         return accounts.fold(0) { highestWealth, account ->
+            maxOf(highestWealth, account.sum())
+        }
     }
 }
