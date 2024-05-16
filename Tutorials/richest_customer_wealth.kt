@@ -41,10 +41,7 @@ class Solution {
     fun maximumWealth(accounts: Array<IntArray>): Int {
         var highestWealth = 0
         for (account in accounts){
-            var sum = 0
-            for (bank in account){
-                sum += bank
-            }
+            val sum = account.sum()
             if (sum > highestWealth) highestWealth = sum
         }
         return highestWealth
