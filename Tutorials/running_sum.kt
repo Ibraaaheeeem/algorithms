@@ -32,7 +32,7 @@ class Solution {
     fun runningSum(nums: IntArray): IntArray {
         var runningSum = IntArray(num.size)
         var thisSum = 0
-        for (i in nums.indices){
+        nums.forEachIndexed{index, num ->
             thisSum += num
             runningSum[i] = thisSum
         }
