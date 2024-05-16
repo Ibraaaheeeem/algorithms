@@ -30,6 +30,6 @@ Constraints:
 // Solution
 class Solution {
     fun runningSum(nums: IntArray): IntArray {
-        return nums.scan(0) { sum, num -> sum + num }.drop(1).toIntArray()
+        yreturn nums.scan(0) { sum, num -> sum + num }.drop(1).toIntArray()
     }
 }
