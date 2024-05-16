@@ -30,12 +30,6 @@ Constraints:
 // Solution
 class Solution {
     fun runningSum(nums: IntArray): IntArray {
-        var runningSum = IntArray(num.size)
-        var thisSum = 0
-        nums.forEachIndexed{index, num ->
-            thisSum += num
-            runningSum[i] = thisSum
-        }
-        return runningSum
+        return nums.scan(0) { sum, num -> sum + num }.drop(1).toIntArray()
     }
 }
